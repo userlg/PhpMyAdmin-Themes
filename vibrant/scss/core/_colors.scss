@@ -1,0 +1,74 @@
+// stylelint-disable scss/dollar-variable-colon-space-after
+// Colors
+// =============================================================================
+
+// PMA color system
+// -----------------------------------------------------------------------------
+$white: #fff;
+$black: #000;
+$pma-gray-100: #f1f5f9; // Slate 100
+$pma-gray-200: #e2e8f0; // Slate 200
+$pma-gray-300: #cbd5e1; // Slate 300
+$pma-gray-400: #94a3b8; // Slate 400
+$pma-gray-500: #64748b; // Slate 500
+$pma-gray-600: #475569; // Slate 600
+$pma-gray-700: #334155; // Slate 700
+$pma-gray-800: #1e293b; // Slate 800
+$pma-gray-900: #0f172a; // Slate 900
+$pma-gray-100-rgb: 241, 245, 249;
+$pma-gray-200-rgb: 226, 232, 240;
+$pma-gray-300-rgb: 203, 213, 225;
+$pma-gray-400-rgb: 148, 163, 184;
+$pma-gray-500-rgb: 100, 116, 139;
+$pma-gray-600-rgb: 71, 85, 105;
+$pma-gray-700-rgb: 51, 65, 85;
+$pma-gray-800-rgb: 30, 41, 59;
+$pma-gray-900-rgb: 15, 23, 42;
+$pma-blue: #f97316; // Vibrant Orange (using blue spot for compatibility)
+$pma-indigo: #ea580c; // Deep Orange
+$pma-purple: #fb923c; // Light Orange
+$pma-violet: #fdba74; // Lighter Orange
+$pma-fuchsia: #64748b; // Slate accent
+$pma-pink: #94a3b8; 
+$pma-red: #ef4444; 
+$pma-orange: #f97316; 
+$pma-yellow: #eab308; 
+$pma-green: #10b981; 
+$pma-teal: #14b8a6; 
+$pma-cyan: #06b6d4; 
+$pma-nord: #88c0d0;
+
+// Glass Variables (Vibrant Orange & White)
+$pma-glass-bg: rgba(255, 255, 255, 0.8); // White Glass
+$pma-glass-border: rgba(249, 115, 22, 0.2); // Orange border
+$pma-glass-blur: blur(10px);
+$pma-glass-highlight: rgba(249, 115, 22, 0.05);
+$pma-orange-tech: #f97316;
+$pma-orange-light: #ffedd5;
+
+// Theme Colors
+// -----------------------------------------------------------------------------
+$pma-theme-colors: (
+  "white": $white,
+  "black": $black,
+  "gray-100": $pma-gray-100,
+  "gray-200": $pma-gray-200,
+  "gray-300": $pma-gray-300,
+  "gray-400": $pma-gray-400,
+  "gray-500": $pma-gray-500,
+  "gray-600": $pma-gray-600,
+  "gray-700": $pma-gray-700,
+  "gray-800": $pma-gray-800,
+  "gray-900": $pma-gray-900,
+  "blue": $pma-blue,
+  "indigo": $pma-indigo,
+  "purple": $pma-purple,
+  "pink": $pma-pink,
+  "red": $pma-red,
+  "orange": $pma-orange,
+  "yellow": $pma-yellow,
+  "green": $pma-green,
+  "teal": $pma-teal,
+  "cyan": $pma-cyan,
+  "nord": $pma-nord,
+);

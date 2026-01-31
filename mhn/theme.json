@@ -1,0 +1,8 @@
+{
+  "name": "mhn Modern",
+  "version": "2.0.0",
+  "description": "Modern Flat Mint Theme",
+  "author": "Antigravity UI (Original by Mohan Khadka)",
+  "url": "https://www.phpmyadmin.net/",
+  "supports": ["5.0", "5.1", "5.2"]
+}

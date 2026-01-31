@@ -1,0 +1,8 @@
+{
+  "name": "Vibrant",
+  "version": "1.0.0",
+  "description": "Vibrant Orange & White Modern Theme",
+  "author": "Antigravity UI",
+  "url": "https://www.phpmyadmin.net/",
+  "supports": ["5.0", "5.1", "5.2"]
+}

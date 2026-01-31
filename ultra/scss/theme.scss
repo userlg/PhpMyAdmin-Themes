@@ -1,0 +1,80 @@
+// Theme: boodark
+
+// 1. Include any default variable overrides here
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+@import "core/colors";
+@import "core/variables";
+
+// 2. Include Bootstrap
+@import "vendors/bootstrap";
+
+// 3. Include "phpMyAdmin" base code
+@import "base/root";
+@import "base/reboot";
+@import "base/common";
+
+// Global transitions and effects
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
+}
+
+body {
+  background-image: radial-gradient(circle at top right, rgba($pma-purple, 0.15), transparent),
+                    radial-gradient(circle at bottom left, rgba($pma-indigo, 0.15), transparent),
+                    linear-gradient(135deg, $pma-body-bg 0%, darken($pma-body-bg, 8%) 100%);
+  background-attachment: fixed;
+  color: $pma-body-color;
+}
+
+// 4. Include "phpMyAdmin" layout code
+@import "layout/navigation";
+@import "layout/forms";
+@import "layout/console";
+
+// 5. Include "phpMyAdmin" components code
+@import "components/tables";
+@import "components/buttons";
+@import "components/icons";
+@import "components/nav";
+@import "components/navbar";
+@import "components/breadcrumb";
+@import "components/list-group";
+@import "components/modal";
+@import "components/text";
+
+// 6. Include "phpMyAdmin" modules code
+@import "modules/ui-custom";
+@import "modules/enum-editor";
+@import "modules/gis";
+@import "modules/designer";
+@import "modules/codemirror";
+@import "modules/jqplot";
+
+// 7. Include "phpMyAdmin" pages/specific code
+@import "pages/settings";
+@import "pages/print";
+
+// Glassmorphism implementations
+#pma_navigation, #pma_console_container, .navbar, .card, .modal-content, .card-header, .alert {
+  background-color: $pma-glass-bg !important;
+  backdrop-filter: $pma-glass-blur !important;
+  -webkit-backdrop-filter: $pma-glass-blur !important;
+  border: 1px solid $pma-glass-border !important;
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(135deg, $pma-glass-highlight 0%, transparent 100%);
+}
+
+.table-responsive {
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+  border: 1px solid $pma-glass-border;
+}
+
+// Hover effects for tables
+tr:hover td {
+  background-color: rgba($pma-primary, 0.1) !important;
+}
+
+// DEBUG
+// stylelint-disable-next-line scss/at-import-no-partial-leading-underscore
+// @import "_debug";

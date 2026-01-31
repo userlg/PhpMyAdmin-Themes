@@ -1,0 +1,8 @@
+{
+  "name": "pmaterial Modern",
+  "version": "2.0.0",
+  "description": "Modern Material Teal Theme",
+  "author": "Antigravity UI (Original by pmaterial)",
+  "url": "https://www.phpmyadmin.net/",
+  "supports": ["5.0", "5.1", "5.2"]
+}

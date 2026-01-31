@@ -1,0 +1,13 @@
+{
+  "name": "boodark-compilation",
+  "version": "1.0.0",
+  "devDependencies": {
+    "sass": "^1.60.0"
+  },
+  "scripts": {
+    "build": "sass scss/theme.scss css/theme.css --load-path=node_modules && sass scss/theme-nord.scss css/theme-nord.css --load-path=node_modules && sass scss/theme-orange.scss css/theme-orange.css --load-path=node_modules && sass scss/theme-teal.scss css/theme-teal.css --load-path=node_modules"
+  },
+  "dependencies": {
+    "bootstrap": "5.3.8"
+  }
+}
