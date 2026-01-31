@@ -1,0 +1,559 @@
+// Navigation styles for the Metro theme
+#pma_navigation {
+  width: $navi-width;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: $navi-background;
+  color: $navi-color;
+  z-index: 800;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+
+  input[type="text"] {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-family: $font-family-base;
+    border-radius: $border-radius-sm;
+    padding: 0.5rem;
+    
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.3);
+      box-shadow: none;
+    }
+  }
+
+  a {
+    &:link,
+    &:visited,
+    &:active {
+      text-decoration: none;
+      color: $navi-color;
+      transition: all 0.2s ease;
+    }
+
+    &:hover {
+      color: #fff;
+    }
+
+    img {
+      border: 0;
+    }
+  }
+
+  select {
+    &#select_server,
+    &#lightm_db {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #fff;
+      border-radius: $border-radius-sm;
+      padding: 0.4rem;
+      
+      option {
+        background-color: $bg-sidebar;
+        color: #fff;
+      }
+    }
+  }
+
+  button {
+    display: inline;
+  }
+}
+
+#pma_navigation_content {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#pma_navigation {
+  ul {
+    margin: 0;
+  }
+
+  form {
+    margin: 0;
+    padding: 0;
+    display: inline;
+  }
+
+  div.pageselector {
+    text-align: center;
+    margin: 0;
+    margin-left: 0.75em;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  #pmalogo {
+    margin: 0;
+    padding: 20px 24px;
+    background: transparent;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: default;
+    height: auto;
+    font-family: $font-family-bold;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+
+    &::after {
+      content: "phpMyAdmin";
+      margin-left: 10px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #fff 0%, #cbd5e1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  #imgpmalogo {
+    display: none;
+  }
+
+  #recentTableList {
+    text-align: center;
+    padding: 12px;
+
+    select {
+      min-width: 100%;
+    }
+  }
+
+  #databaseList {
+    text-align: center;
+    margin: 10px;
+  }
+
+  #navipanellinks {
+    padding: 12px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+
+    a {
+      box-sizing: content-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      padding: 0;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      
+      &:hover {
+        background: $primary-modern;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+      }
+    }
+
+    img {
+      filter: invert(1) brightness(2);
+      transform: scale(0.9);
+    }
+  }
+}
+
+#pma_navigation {
+  #serverChoice,
+  #databaseList,
+  div.pageselector.dbselector {
+    text-align: center;
+    padding: 5px 10px 0;
+    border: 0;
+  }
+}
+
+#pma_navigation_content > img.throbber {
+  display: none;
+  margin: 0.3em auto 0;
+}
+
+/* Navigation tree */
+#pma_navigation_tree {
+  margin: 15px 0;
+  padding: 0 15px;
+  overflow: hidden;
+  height: calc(100% - 150px);
+  position: relative;
+}
+
+#pma_navigation_select_database {
+  text-align: left;
+  padding: 0 0 0;
+  border: 0;
+  margin: 0;
+}
+
+#pma_navigation_db_select {
+  margin-top: 0.5em;
+  margin-left: 0.75em;
+
+  select {
+    border: 1px solid #bbb;
+    border-top: 1px solid #bbb;
+    color: #333;
+    padding: 4px 6px;
+    margin: 0 0 0;
+    width: 92%;
+  }
+}
+
+#pma_navigation_tree_content {
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  position: absolute;
+  height: 100%;
+}
+
+#pma_navigation_tree li {
+  .dbItemControls {
+    padding-right: 4px;
+    float: right;
+  }
+
+  .navItemControls {
+    display: none;
+    padding-right: 4px;
+    float: right;
+  }
+
+  &.activePointer .navItemControls {
+    display: block;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+#pma_navigation_tree_content a.hover_show_full {
+  position: relative;
+  z-index: 100;
+}
+
+#pma_navigation_tree {
+  a {
+    color: rgba(255, 255, 255, 0.75);
+    padding: 4px 0;
+    display: inline-block;
+
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+
+  li {
+    margin-bottom: 0;
+
+    &.activePointer,
+    &.selected {
+      color: $th-color;
+    }
+  }
+
+  ul {
+    clear: both;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+
+    ul {
+      position: relative;
+    }
+  }
+
+  li {
+    white-space: nowrap;
+    clear: both;
+    min-height: 17px;
+  }
+
+  img {
+    margin: 0;
+  }
+
+  i {
+    display: block;
+  }
+
+  div {
+    &.block {
+      position: relative;
+      width: 1.5em;
+      height: 2em;
+      min-width: 16px;
+      min-height: 16px;
+      float: left;
+
+      &.double {
+        width: 2.5em;
+      }
+
+      i,
+      b {
+        width: 1.5em;
+        height: 2em;
+        min-width: 16px;
+        min-height: 8px;
+        position: absolute;
+        bottom: 0.7em;
+        left: 0.75em;
+        z-index: 0;
+        margin-top: -4px;
+      }
+
+      /* Top and right segments for the tree element connections */
+      i {
+        display: block;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        position: relative;
+        z-index: 0;
+
+        /* Removes top segment */
+        &.first {
+          border-left: 0;
+        }
+      }
+
+      /* Bottom segment for the tree element connections */
+      b {
+        display: block;
+        height: 0.75em;
+        bottom: -0.5rem;// Compensate for vertical-align: sub; of hover_show_full
+        left: 0.75em;
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      a,
+      u {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 10;
+      }
+
+      a + a {
+        left: 100%;
+      }
+
+      &.double {
+        a,
+        u {
+          left: 33%;
+        }
+
+        a + a {
+          left: 85%;
+        }
+      }
+
+      img {
+        position: relative;
+        top: -0.6em;
+        left: 0;
+        margin-left: -7px;
+      }
+    }
+
+    &.throbber img {
+      top: 2px;
+      left: 2px;
+    }
+  }
+
+  li {
+    &.last > ul {
+      background: none;
+    }
+
+    > {
+      a,
+      i {
+        line-height: 1.5em;
+        height: 1.5em;
+        padding-left: 0.3em;
+      }
+    }
+  }
+
+  .list_container {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    margin-left: 0.75em;
+    padding-left: 0.75em;
+
+    li.last.database {
+      // Revert the effect of the rule that is applied on all the tree
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .last > .list_container {
+    border-left: 0 solid #616161;
+  }
+}
+
+/* Fast filter */
+li.fast_filter {
+  padding-left: 0.75em;
+  margin-left: 0.75em;
+  padding-right: 15px;
+  border-left: 1px solid #616161;
+
+  input {
+    font-size: 0.7em;
+  }
+
+  .searchClauseClear {
+    background-color: transparent;
+    font-weight: bold;
+    color: #800;
+    font-size: 0.7em;
+  }
+
+  .searchClauseClear:hover {
+    background-color: transparent;
+  }
+
+  &.db_fast_filter {
+    border: 0;
+    margin-left: 0;
+  }
+}
+
+#navigation_controls_outer {
+  min-height: 21px !important;
+}
+
+#pma_navigation_collapse {
+  padding-right: 2px;
+}
+
+#navigation_controls_outer.activePointer {
+  background-color: transparent !important;
+}
+
+#navigation_controls {
+  float: right;
+  padding-right: 23px;
+}
+
+/* Resize handler */
+#pma_navigation_resizer {
+  width: 1px;
+  height: 100%;
+  background-color: #aaa;
+  cursor: col-resize;
+  position: fixed;
+  top: 0;
+  left: $navi-width;
+  z-index: 801;
+}
+
+#pma_navigation_collapser {
+  width: 20px;
+  padding-top: 4px;
+  padding-bottom: 12px;
+  background: $navi-background;
+  border-bottom: 1px solid $navi-background;
+  line-height: 22px;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: $navi-width;
+  text-align: center;
+  cursor: pointer;
+  z-index: 801;
+}
+
+/* Quick warp links */
+.pma_quick_warp {
+  margin-top: 5px;
+  margin-left: 10px;
+  position: relative;
+
+  .drop_list {
+    float: left;
+    margin-left: 3px;
+    padding: 2px 0;
+  }
+
+  .drop_button {
+    padding: 0.2em 0.5em;
+    border: 1px solid #ddd;
+    background: #f2f2f2;
+    cursor: pointer;
+    color: #333;
+  }
+
+  .drop_list {
+    &:hover .drop_button {
+      background: #fff;
+      color: #333;
+    }
+
+    ul {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      overflow-y: auto;
+      list-style: none;
+      background: #fff;
+      border: 1px solid #ddd;
+      top: 100%;
+      left: 3px;
+      right: 0;
+      display: none;
+      z-index: 802;
+    }
+
+    &:hover ul {
+      display: block;
+    }
+
+    li {
+      white-space: nowrap;
+      padding: 0;
+
+      img {
+        vertical-align: sub;
+      }
+
+      &:hover {
+        background: #f2f2f2;
+      }
+    }
+
+    a {
+      display: block;
+      padding: 0.2em 0.3em;
+
+      &.favorite_table_anchor {
+        clear: left;
+        float: left;
+        padding: 0.1em 0.3em 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import "../../bootstrap/scss/breadcrumb";
+
+.breadcrumb-navbar {
+  color: #fff;
+  background-color: $primary-modern;
+  padding: 12px 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+
+  a {
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    transition: color 0.2s ease;
+
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+
+    + .breadcrumb-item::before,
+    &::before {
+      width: auto;
+      margin: 0 10px;
+      color: rgba(255, 255, 255, 0.5);
+      font-weight: bold;
+
+      /* The arrow symbol */
+      content: "/";
+    }
+
+    .icon {
+      display: none;
+    }
+  }
+
+  .breadcrumb-comment {
+    font-style: italic;
+    opacity: 0.8;
+  }
+}

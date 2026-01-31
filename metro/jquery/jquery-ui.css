@@ -1,0 +1,150 @@
+/* ===========================
+   ULTRA THEME OVERRIDES
+   =========================== */
+
+/* Base containers */
+.ui-widget-content {
+  background: #0d1117 !important;
+  color: #c9d1d9 !important;
+  border: 1px solid #21262d !important;
+}
+
+.ui-widget-header {
+  background: #161b22 !important;
+  border: 1px solid #21262d !important;
+  color: #f0f6fc !important;
+  font-weight: 600;
+}
+
+/* Buttons */
+.ui-button {
+  background: #238636 !important;
+  border: none !important;
+  color: #ffffff !important;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+}
+
+.ui-button:hover {
+  background: #2ea043 !important;
+}
+
+/* Inputs */
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea {
+  background: #161b22 !important;
+  color: #e6edf3 !important;
+  border: 1px solid #30363d !important;
+  border-radius: 6px;
+}
+
+/* Active / Hover states */
+.ui-state-hover,
+.ui-state-focus {
+  background: #21262d !important;
+  border-color: #30363d !important;
+  color: #f0f6fc !important;
+}
+
+.ui-state-active {
+  background: #238636 !important;
+  color: #ffffff !important;
+  border-color: #238636 !important;
+}
+
+/* Dialogs */
+.ui-dialog {
+  background: #0d1117 !important;
+  border: 1px solid #21262d !important;
+  border-radius: 10px;
+}
+
+.ui-dialog-titlebar {
+  background: #161b22 !important;
+  color: #f0f6fc !important;
+  border-bottom: 1px solid #21262d !important;
+}
+
+/* Tabs */
+.ui-tabs .ui-tabs-nav {
+  background: #0d1117 !important;
+  border-bottom: 1px solid #21262d !important;
+}
+
+.ui-tabs .ui-tabs-nav li {
+  background: #161b22 !important;
+  border: 1px solid #21262d !important;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+  background: #238636 !important;
+  border-color: #238636 !important;
+}
+
+.ui-tabs .ui-tabs-anchor {
+  color: #c9d1d9 !important;
+}
+
+.ui-tabs .ui-tabs-active .ui-tabs-anchor {
+  color: #ffffff !important;
+}
+
+/* Datepicker */
+.ui-datepicker {
+  background: #0d1117 !important;
+  border: 1px solid #21262d !important;
+}
+
+.ui-datepicker-header {
+  background: #161b22 !important;
+  border-bottom: 1px solid #21262d !important;
+}
+
+.ui-datepicker td a {
+  color: #c9d1d9 !important;
+}
+
+.ui-datepicker td a:hover {
+  background: #238636 !important;
+  color: #ffffff !important;
+}
+
+/* Menus */
+.ui-menu {
+  background: #0d1117 !important;
+  border: 1px solid #21262d !important;
+}
+
+.ui-menu-item-wrapper:hover {
+  background: #21262d !important;
+  color: #ffffff !important;
+}
+
+/* Progressbar */
+.ui-progressbar {
+  background: #161b22 !important;
+  border: 1px solid #21262d !important;
+}
+
+.ui-progressbar-value {
+  background: #238636 !important;
+}
+
+/* Tooltips */
+.ui-tooltip {
+  background: #161b22 !important;
+  color: #f0f6fc !important;
+  border: 1px solid #30363d !important;
+  border-radius: 6px;
+}
+
+/* Overlay */
+.ui-widget-overlay {
+  background: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Shadow */
+.ui-widget-shadow {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6) !important;
+}

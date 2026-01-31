@@ -1,0 +1,148 @@
+// Modern Metro Theme Configuration
+$navi-width: 280px;
+
+// Theme color scheme
+// Default: "modern"
+$color-scheme: modern !default;
+
+// Modern Harmonious Palette
+$primary-modern: #2563eb; // Royal Blue (Default)
+$primary-hover: #1d4ed8;
+
+@if $color-scheme == "teal" {
+  $primary-modern: #0d9488;
+  $primary-hover: #0f766e;
+} @else if $color-scheme == "blueeyes" {
+  $primary-modern: #0284c7;
+  $primary-hover: #0369a1;
+} @else if $color-scheme == "mono" {
+  $primary-modern: #475569;
+  $primary-hover: #334155;
+} @else if $color-scheme == "redmond" {
+  $primary-modern: #e11d48;
+  $primary-hover: #be123c;
+}
+
+$secondary-modern: #64748b; // Slate
+$bg-main: #f8fafc; // Very light sky blue/grey
+$bg-sidebar: #0f172a; // Deep Navy
+$bg-sidebar-hover: #1e293b;
+$text-main: #1e293b;
+$text-muted: #64748b;
+$border-modern: #e2e8f0;
+
+// Semantic Colors
+$success: #10b981;
+$danger: #ef4444;
+$warning: #f59e0b;
+$info: #3b82f6;
+
+// Navigation
+$navi-color: #f1f5f9;
+$navi-background: $bg-sidebar;
+$navi-background-light: $bg-sidebar-hover;
+$navi-pointer-color: #fff;
+$navi-pointer-background: $primary-modern;
+$navi-database-name-color: #fff;
+$navi-hover-background: $bg-sidebar-hover;
+
+// Main Content
+$main-color: $text-main;
+$body-bg: $bg-main;
+$browse-pointer-color: $primary-modern;
+$browse-marker-color: #000;
+$browse-warning-color: $danger;
+$browse-success-color: $success;
+$browse-gray-color: $text-muted;
+$browse-marker-background: #f1f5f9;
+$border-color: $border-modern;
+
+// Buttons
+$button-color: #fff;
+$button-background: $primary-modern;
+$button-hover: $primary-hover;
+
+// Tables
+$th-background: #fff;
+$th-disabled-background: #f8fafc;
+$th-color: #475569;
+$th-pointer-color: #000;
+$bg-one: #fff;
+$bg-two: #f8fafc;
+$blue-header: $primary-modern;
+
+// Bootstrap Overrides
+$body-color: $main-color;
+$link-color: $primary-modern;
+$link-decoration: none;
+$link-hover-color: $primary-hover;
+$link-hover-decoration: none;
+
+// Components
+$border-radius: 12px;
+$border-radius-sm: 8px;
+$border-radius-lg: 16px;
+$box-shadow:
+  0 4px 6px -1px rgba(0, 0, 0, 0.1),
+  0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$box-shadow-sm:
+  0 1px 3px 0 rgba(0, 0, 0, 0.1),
+  0 1px 2px 0 rgba(0, 0, 0, 0.06);
+
+// Typography
+$font-family-base: "Manrope", "Outfit", "Inter", "Segoe UI", Roboto, sans-serif;
+$font-family-monospace: "JetBrains Mono", "Fira Code", monospace;
+
+$font-family-light: "Manrope", "Outfit", sans-serif;
+$font-family-bold: "Manrope", "Outfit", sans-serif;
+$font-family-extra-bold: "Manrope", "Outfit", sans-serif;
+
+$font-size-base: 0.875rem;
+$line-height-base: 1.55;
+
+$h1-font-size: 2.5rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.75rem;
+$headings-font-weight: 600;
+
+// Tables
+$table-cell-padding-y: 1rem;
+$table-cell-padding-x: 1rem;
+$table-bg: #fff;
+$table-head-bg: #f8fafc;
+$table-head-color: $text-muted;
+$table-hover-bg: #f1f5f9;
+$table-border-width: 1px;
+
+// Buttons
+$enable-transitions: true;
+$primary: $primary-modern;
+$secondary: $secondary-modern;
+$btn-border-radius: $border-radius-sm;
+$btn-padding-y: 0.6rem;
+$btn-padding-x: 1.2rem;
+
+// Forms
+$input-border-radius: $border-radius-sm;
+$input-bg: #fff;
+$input-border-color: $border-modern;
+$input-focus-border-color: $primary-modern;
+
+// Navs
+$nav-tabs-border-color: $border-modern;
+$nav-tabs-link-active-border-color: $border-modern $border-modern #fff;
+
+// Navbar
+$navbar-light-active-color: $primary-modern;
+
+// Breadcrumbs
+$breadcrumb-navbar-padding-y: 0.5rem;
+$breadcrumb-navbar-padding-x: 1rem;
+$breadcrumb-navbar-margin-bottom: 0;
+$breadcrumb-navbar-bg: $bg-main;
+
+// Additions for Glassmorphism
+$glass-bg: rgba(255, 255, 255, 0.85);
+$glass-border: rgba(255, 255, 255, 0.5);
+$glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+$backdrop-blur: blur(12px);
